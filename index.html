@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="zh">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>隐私政策 - Super2Brain</title>
+		<style>
+			:root {
+				--primary-color: #3b82f6;
+				--primary-dark: #1d4ed8;
+				--text-color: #1f2937;
+				--bg-color: #ffffff;
+				--secondary-bg: #f3f4f6;
+				--border-radius: 12px;
+				--transition: all 0.3s ease;
+				--shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+				--shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+				--shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+			}
+
+			body {
+				font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+					sans-serif;
+				line-height: 1.8;
+				max-width: 1400px;
+				margin: 0 auto;
+				padding: 40px;
+				color: var(--text-color);
+				background-color: #fafafa;
+			}
+
+			main {
+				background: var(--bg-color);
+				max-width: 900px;
+				margin: 0 auto;
+				padding: 40px 60px;
+				border-radius: var(--border-radius);
+				box-shadow: var(--shadow);
+			}
+
+			h1 {
+				font-size: 56px;
+				text-align: center;
+				margin: 40px 0;
+				background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				font-weight: 800;
+				letter-spacing: -1px;
+			}
+
+			h2 {
+				font-size: 32px;
+				margin-top: 48px;
+				padding-bottom: 16px;
+				border-bottom: 2px solid #e5e7eb;
+				color: var(--primary-dark);
+				font-weight: 700;
+			}
+
+			.effective-date {
+				text-align: center;
+				margin: 20px 0 60px;
+				color: #6b7280;
+				font-style: italic;
+				font-size: 18px;
+			}
+
+			p {
+				margin: 24px 0;
+				font-size: 16px;
+				color: #4b5563;
+				line-height: 2;
+				text-align: justify;
+				letter-spacing: 0.5px;
+			}
+
+			ul {
+				margin: 24px 0;
+				padding-left: 20px;
+				max-width: 800px;
+				margin-left: auto;
+				margin-right: auto;
+			}
+
+			li {
+				margin: 20px 0;
+				color: #4b5563;
+				position: relative;
+				padding-left: 28px;
+				list-style: none;
+				line-height: 1.8;
+			}
+
+			li::before {
+				content: '→';
+				color: var(--primary-color);
+				position: absolute;
+				left: 0;
+				font-weight: bold;
+			}
+
+			.sidebar {
+				position: fixed;
+				right: 40px;
+				top: 100px;
+				width: 280px;
+				padding: 32px;
+				background-color: var(--secondary-bg);
+				border-radius: var(--border-radius);
+				box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+			}
+
+			.sidebar h3 {
+				margin-top: 0;
+				margin-bottom: 20px;
+				color: var(--primary-color);
+				font-size: 20px;
+				font-weight: 600;
+				text-align: center;
+			}
+
+			.sidebar a {
+				display: block;
+				margin: 12px 0;
+				color: #4b5563;
+				text-decoration: none;
+				padding: 8px 16px;
+				border-radius: var(--border-radius);
+				transition: all 0.3s ease;
+				font-size: 15px;
+			}
+
+			.sidebar a:hover {
+				background-color: #e9ecef;
+				color: var(--primary-color);
+				transform: translateX(5px);
+			}
+
+			/* 响应式设计 */
+			@media (max-width: 1200px) {
+				body {
+					margin: 0 20px;
+					padding: 20px;
+				}
+
+				.sidebar {
+					position: static;
+					width: auto;
+					margin: 40px 0;
+				}
+
+				main {
+					margin: 0 20px;
+					padding: 30px;
+				}
+			}
+
+			main {
+				max-width: 800px;
+				margin-right: 300px;
+			}
+
+			#contact ul li {
+				display: flex;
+				align-items: center;
+				gap: 10px;
+			}
+
+			.card {
+				background: white;
+				padding: 24px;
+				border-radius: var(--border-radius);
+				box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+				margin: 20px 0;
+			}
+
+			.highlight {
+				color: var(--primary-color);
+				font-weight: 500;
+			}
+
+			/* 添加段落分隔样式 */
+			.section-divider {
+				height: 2px;
+				background: linear-gradient(to right, transparent, var(--primary-color), transparent);
+				margin: 40px 0;
+				opacity: 0.2;
+			}
+
+			/* 添加段落高亮效果 */
+			.highlight-paragraph {
+				background-color: #fff8e6;
+				padding: 20px;
+				border-radius: 8px;
+				border-left: 4px solid #ffd700;
+				margin: 30px 0;
+			}
+
+			.language-switch {
+				position: fixed;
+				top: 20px;
+				right: 20px;
+				display: flex;
+				gap: 10px;
+				z-index: 1000;
+			}
+
+			.lang-btn {
+				padding: 8px 16px;
+				border: 1px solid var(--primary-color);
+				border-radius: 20px;
+				background: transparent;
+				color: var(--primary-color);
+				cursor: pointer;
+				transition: var(--transition);
+			}
+
+			.lang-btn.active {
+				background: var(--primary-color);
+				color: white;
+			}
+
+			.lang-btn:hover {
+				background: var(--primary-color);
+				color: white;
+			}
+		</style>
+	</head>
+	<body>
+		<main>
+			<h1 data-lang-zh="隐私政策" data-lang-en="Privacy Policy"></h1>
+			<div class="language-switch">
+				<button onclick="switchLanguage('zh')" class="lang-btn active" data-lang="zh">中文</button>
+				<button onclick="switchLanguage('en')" class="lang-btn" data-lang="en">English</button>
+			</div>
+			<div
+				class="effective-date"
+				data-lang-zh="生效日期：2024年12月10日"
+				data-lang-en="Effective Date: December 10, 2024"></div>
+
+			<div class="highlight-paragraph">
+				<p
+					data-lang-zh="如果本政策被翻译成中文以外的任何语言，在发生冲突的情况下，应以中文版本为准，但以适用法律允许的最大范围为限。"
+					data-lang-en="If this policy is translated into any language other than Chinese, in the event of a conflict, the Chinese version shall prevail, but within the scope permitted by applicable law."></p>
+			</div>
+
+			<div class="section-divider"></div>
+
+			<h2 data-lang-zh="简介" data-lang-en="Introduction"></h2>
+			<p
+				data-lang-zh="我们是Super2Brain。通过本隐私政策，我们说明在您访问或使用Super2Brain插件的时候，我们如何收集、使用和披露您的信息。"
+				data-lang-en="We are Super2Brain . Through this Privacy Policy, we explain how we collect, use, and disclose your information when you visit or use Super2Brain websites and applications."></p>
+			<!-- 这里加一个tip  -->
+			<h2 data-lang-zh="信息收集与使用" data-lang-en="Information Collection and Use"></h2>
+			<div class="highlight-paragraph">
+				<p
+					data-lang-zh="注意：Super2Brain并不会主动收集您的个人信息，所有的信息都是用户通过提交的方式提交给我们的。"
+					data-lang-en="Note: Super2Brain does not actively collect your personal information. All information is submitted to us by users through the submission process."></p>
+			</div>
+			<p
+				data-lang-zh="在您使用Super2Brain服务时，我们会收集以下信息："
+				data-lang-en="When you use Super2Brain services, we collect the following information:"></p>
+			<ul>
+				<li
+					data-lang-zh="账户信息：您在注册和使用Super2Brain时提供的信息，包括电子邮件地址和用户名(虚拟的)。"
+					data-lang-en="Account Information: Information you provide when registering and using Super2Brain, including email address and username (virtual)."></li>
+				<li
+					data-lang-zh="书签和网页内容：通过我们的浏览器插件，您选择导入的书签内容和网页数据。"
+					data-lang-en="Bookmarks and Web Content: Bookmark content and webpage data you choose to import through our browser plugin."></li>
+				<li
+					data-lang-zh="使用数据：您如何使用我们的服务，包括访问时间、使用频率等信息。"
+					data-lang-en="Usage Data: How you use our services, including access time, frequency of use, and other information."></li>
+			</ul>
+
+			<h2 id="data-processing" data-lang-zh="数据处理" data-lang-en="Data Processing"></h2>
+			<p
+				data-lang-zh="我们使用AI技术处理您导入的内容："
+				data-lang-en="We use AI technology to process your imported content:"></p>
+			<ul>
+				<li>
+					<p
+						data-lang-zh="所有导入的内容都将经由我们先进的AI系统进行智能处理和深度分析，以确保最佳的使用体验。"
+						data-lang-en="All imported content undergoes intelligent processing and in-depth analysis through our advanced AI system to ensure optimal user experience."></p>
+				</li>
+				<li>
+					<p
+						data-lang-zh="经过处理的数据将被安全加密存储在我们的高性能服务器中，并与您的个人账户建立专属关联，确保数据隐私。"
+						data-lang-en="Processed data is securely encrypted and stored in our high-performance servers, exclusively linked to your personal account to ensure data privacy."></p>
+				</li>
+				<li>
+					<p
+						data-lang-zh="我们采用业界领先的加密技术和安全防护措施，全方位保障您的数据安全，让您可以安心使用我们的服务。"
+						data-lang-en="We implement industry-leading encryption technology and comprehensive security measures to protect your data, allowing you to use our services with complete peace of mind."></p>
+				</li>
+			</ul>
+
+			<h2 id="api-keys" data-lang-zh="API密钥使用" data-lang-en="API Key Usage"></h2>
+			<p data-lang-zh="关于API密钥的使用：" data-lang-en="Regarding the use of API keys:"></p>
+			<ul>
+				<li>
+					<p
+						data-lang-zh="每个用户都可以免费创建多个API密钥，用于在该插件中访问super2brain的服务。"
+						data-lang-en="Each user can create multiple API keys for free, which are used to access Super2Brain services through the plugin."></p>
+				</li>
+				<li>
+					<p
+						data-lang-zh="API密钥是免费提供的，但用户需要妥善保管。"
+						data-lang-en="API keys are free, but users need to keep them secure."></p>
+				</li>
+				<li>
+					<p
+						data-lang-zh="请勿与他人分享您的API密钥,以保护您的账户安全以及数据的安全。"
+						data-lang-en="Do not share your API keys with others to protect your account security and data security."></p>
+				</li>
+			</ul>
+
+			<h2 id="privacy-center" data-lang-zh="隐私中心" data-lang-en="Privacy Center"></h2>
+			<p
+				data-lang-zh="我们的隐私中心为您提供完整的隐私控制选项："
+				data-lang-en="Our Privacy Center provides you with complete privacy control options:"></p>
+			<ul>
+				<li>
+					<p
+						data-lang-zh="查看和管理您的个人数据(您上传的网页,书签以及一些文件)"
+						data-lang-en="View and manage your personal data (the webpages, bookmarks, and some files you upload)"></p>
+				</li>
+				<li><p data-lang-zh="保存你拿到数据副本" data-lang-en="Save your data copy"></p></li>
+				<li>
+					<p data-lang-zh="管理您的隐私偏好设置" data-lang-en="Manage your privacy preferences"></p>
+				</li>
+			</ul>
+
+			<h2
+				id="region-info"
+				data-lang-zh="区域特定信息"
+				data-lang-en="Region-Specific Information"></h2>
+			<p
+				data-lang-zh="我们遵守不同地区的隐私保护法规："
+				data-lang-en="We comply with privacy protection regulations in different regions:"></p>
+			<ul>
+				<li>
+					<p data-lang-zh="欧盟用户：遵守GDPR规定" data-lang-en="EU Users: Comply with GDPR"></p>
+				</li>
+				<li>
+					<p
+						data-lang-zh="中国用户：遵守《个人信息保护法》"
+						data-lang-en="Chinese Users: Comply with the Personal Information Protection Law"></p>
+				</li>
+				<li>
+					<p
+						data-lang-zh="加州用户：遵守CCPA规定"
+						data-lang-en="California Users: Comply with CCPA"></p>
+				</li>
+			</ul>
+
+			<h2 id="cookie-notice" data-lang-zh="Cookie声明" data-lang-en="Cookie Notice"></h2>
+			<p
+				data-lang-zh="我们使用Cookie来改善您的使用体验："
+				data-lang-en="We use cookies to improve your user experience:"></p>
+			<ul>
+				<li>
+					<p
+						data-lang-zh="必要Cookie：维持网站基本功能"
+						data-lang-en="Essential Cookies: Maintain website basic functions"></p>
+				</li>
+				<li>
+					<p
+						data-lang-zh="分析Cookie：了解用户使用习惯"
+						data-lang-en="Analytical Cookies: Understand user usage habits"></p>
+				</li>
+				<li>
+					<p
+						data-lang-zh="功能Cookie：记住您的偏好设置"
+						data-lang-en="Functional Cookies: Remember your preferences"></p>
+				</li>
+			</ul>
+
+			<h2 id="vendors">供应商</h2>
+			<p
+				data-lang-zh="我们与以下类型的供应商合作："
+				data-lang-en="We collaborate with the following types of suppliers:"></p>
+			<ul>
+				<li>
+					<p
+						data-lang-zh="阿里云服务提供商：用于数据存储和处理"
+						data-lang-en="Aliyun Service Provider: Used for data storage and processing"></p>
+				</li>
+			</ul>
+			<!-- <h2 id="contact">联系我们</h2>
+			<p>如果您有任何问题或需要帮助，请通过以下方式联系我们：</p>
+			<ul>
+				<li>邮箱：super2brain@gmail.com</li>
+			</ul> -->
+		</main>
+
+		<div class="sidebar">
+			<h3 data-lang-zh="快速导航" data-lang-en="Quick Navigation"></h3>
+			<a href="#intro" data-lang-zh="简介" data-lang-en="Introduction"></a>
+			<a
+				href="#data-collection"
+				data-lang-zh="信息收集与使用"
+				data-lang-en="Information Collection and Use"></a>
+			<a href="#data-processing" data-lang-zh="数据处理" data-lang-en="Data Processing"></a>
+			<a href="#api-keys" data-lang-zh="API密钥使用" data-lang-en="API Key Usage"></a>
+			<a href="#privacy-center" data-lang-zh="隐私中心" data-lang-en="Privacy Center"></a>
+			<a
+				href="#region-info"
+				data-lang-zh="区域特定信息"
+				data-lang-en="Region-Specific Information"></a>
+			<a href="#cookie-notice" data-lang-zh="Cookie声明" data-lang-en="Cookie Notice"></a>
+			<a href="#vendors" data-lang-zh="供应商" data-lang-en="Vendors"></a>
+		</div>
+
+		<script>
+			function switchLanguage(lang) {
+				document.querySelectorAll('.lang-btn').forEach(btn => {
+					btn.classList.remove('active')
+					if (btn.dataset.lang === lang) {
+						btn.classList.add('active')
+					}
+				})
+
+				// 更新所有带有语言数据属性的元素
+				document.querySelectorAll(`[data-lang-${lang}]`).forEach(element => {
+					element.textContent = element.getAttribute(`data-lang-${lang}`)
+				})
+
+				// 保存语言偏好
+				localStorage.setItem('preferred-language', lang)
+			}
+
+			// 页面加载时检查语言偏好
+			document.addEventListener('DOMContentLoaded', () => {
+				const savedLang = localStorage.getItem('preferred-language') || 'zh'
+				switchLanguage(savedLang)
+			})
+		</script>
+	</body>
+</html>
